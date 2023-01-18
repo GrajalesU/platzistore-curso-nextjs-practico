@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <AppContext.Provider value={initialState}>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BXC77X5Y4T" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-BXC77X5Y4T" strategy="afterInteractive" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

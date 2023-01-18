@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { TProduct } from '../..';
 
 export type ContextType = {
-  cart: TProduct[],
-  orderIsOpen: boolean,
-  menuIsOpen: boolean
-}
+  cart: TProduct[];
+  orderIsOpen: boolean;
+  menuIsOpen: boolean;
+};
 
 const initialState: ContextType = {
   cart: [],
@@ -18,13 +19,11 @@ const useInitialState = () => {
   const addToCart = (payload: TProduct) => {
     setState({
       ...state,
-      cart: state.cart.includes(payload)
-        ? state.cart
-        : [...state.cart, payload],
+      cart: state.cart.includes(payload) ? state.cart : [...state.cart, payload],
     });
   };
 
-  const removeFromCart = (payload: {id: number}) => {
+  const removeFromCart = (payload: { id: number }) => {
     setState({
       ...state,
       cart: state.cart.filter((items) => items.id !== payload.id),

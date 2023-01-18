@@ -1,4 +1,4 @@
-type TProduct = {
+export type TProduct = {
   category: TCategory;
   creationAt: string;
   description: string;

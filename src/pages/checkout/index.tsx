@@ -1,4 +1,3 @@
-import OrderItem from '@components/OrderItem';
 import styles from '@styles/Checkout.module.scss';
 import Head from 'next/head';
 
@@ -20,7 +19,7 @@ export default function Checkout() {
               <p>$560.00</p>
             </div>
           </div>
-          <OrderItem />
+          {/* <OrderItem /> */}
         </div>
       </div>
     </>

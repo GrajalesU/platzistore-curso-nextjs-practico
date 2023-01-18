@@ -4,12 +4,13 @@ import styles from '@styles/MyOrder.module.scss';
 import { useContext } from 'react';
 import AppContext from '../context/AppContext';
 import Image from 'next/image';
+import { TProduct } from '../..';
 
 const MyOrder = () => {
   const { state, toggleOrder } = useContext(AppContext);
 
   const sumTotal = () => {
-    const reducer = (accumulator:number, currentValue:TProduct) => accumulator + currentValue.price;
+    const reducer = (accumulator: number, currentValue: TProduct) => accumulator + currentValue.price;
     const sum = state.cart.reduce(reducer, 0);
     return sum;
   };

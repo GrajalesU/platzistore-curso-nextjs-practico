@@ -3,6 +3,7 @@ import styles from '@styles/OrderItem.module.scss';
 import Image from 'next/image';
 import { useContext } from 'react';
 import AppContext from '../context/AppContext';
+import { TProduct } from '../..';
 
 const OrderItem = ({ product }: { product?: TProduct }) => {
   const { removeFromCart } = useContext(AppContext);

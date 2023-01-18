@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { ContextType } from '@hooks/useInitialState';
 import React from 'react';
+import { TProduct } from '../..';
 
 const AppContext = React.createContext({} as AppContextType);
 

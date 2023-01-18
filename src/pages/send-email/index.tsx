@@ -3,6 +3,7 @@ import logo from '@logos/logo_yard_sale.svg';
 import styles from '@styles/SendEmail.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SendEmail = () => {
   return (
@@ -20,8 +21,8 @@ const SendEmail = () => {
           </div>
           <button className={[styles['primary-button'], styles['login-button']].join(' ')}>Login</button>
           <p className={styles['resend']}>
-            <span>Didn't receive the email?</span>
-            <a href="/">Resend</a>
+            <span>Did not receive the email?</span>
+            <Link href="/">Resend</Link>
           </p>
         </div>
       </div>

@@ -1,23 +1,29 @@
 import logo from '@logos/logo_yard_sale.svg';
 import styles from '@styles/PasswordRecovery.module.scss';
+import Head from 'next/head';
 import Image from 'next/image';
 
 const PasswordRecovery = () => {
   return (
-    <div className={styles['PasswordRecovery']}>
-      <div className={styles['PasswordRecovery-container']}>
-        <Image src={logo} alt="logo" className="logo" />
-        <h1 className={styles['title']}>Password recovery</h1>
-        <p className={styles['subtitle']}>Inform the email address used to create your account</p>
-        <form action="/" className={styles['form']}>
-          <label htmlFor="email" className={styles['label']}>
-            Email address
-          </label>
-          <input type="text" id="email" className={`${styles['input']} ${styles['input-email']}`} />
-          <input type="submit" value="Confirm" className={`${styles['primary-button']} ${styles['login-button']}`} />
-        </form>
+    <>
+      <Head>
+        <title>Platzi Store | Recovery Password</title>
+      </Head>
+      <div className={styles['PasswordRecovery']}>
+        <div className={styles['PasswordRecovery-container']}>
+          <Image src={logo} alt="logo" className="logo" />
+          <h1 className={styles['title']}>Password recovery</h1>
+          <p className={styles['subtitle']}>Inform the email address used to create your account</p>
+          <form action="/" className={styles['form']}>
+            <label htmlFor="email" className={styles['label']}>
+              Email address
+            </label>
+            <input type="text" id="email" className={`${styles['input']} ${styles['input-email']}`} />
+            <input type="submit" value="Confirm" className={`${styles['primary-button']} ${styles['login-button']}`} />
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
